@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private static final String PCM_PATH = "/mnt/sdcard/tonghuazhen_part.pcm";
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -37,4 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+
+
+
 }

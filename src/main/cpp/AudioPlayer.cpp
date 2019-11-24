@@ -147,11 +147,7 @@ int AudioPlayer::Play() {
     (*audioPlayerPlay)->SetPlayState(audioPlayerPlay, SL_PLAYSTATE_PLAYING);
 
     LOGI("setPlayerState:SL_PLAYSTATE_PLAYING");
-    //10启动回调机制
-    (*outputBufferQueueInterface)->Enqueue(outputBufferQueueInterface,
-                                           readPCMBuffer,
-                                           44100 * 2 * 2);
-    LOGI("start Enqueue");
+    //10.调用回调函数，启动播放
     PlayCallback(outputBufferQueueInterface, this);
     return 0;
 }
